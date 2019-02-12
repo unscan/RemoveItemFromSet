@@ -4,6 +4,13 @@ include ("file_containing_api_key.php");
 
 $set_id = $_POST["set_id1"];
 $barcode = $_POST["barcode1"];
+$environment = $_POST["enviro"];
+
+if($environment == 'production'){
+  $apikey = $production_key;
+}else{
+  $apikey = $sandbox_key;
+}
 
 $info = simplexml_load_file('set_item.xml');
 
