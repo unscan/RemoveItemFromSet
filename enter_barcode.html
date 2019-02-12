@@ -11,16 +11,27 @@
 </head>
 <body>
 <div id="form_container">
-<h4>Remove item from set:</h4>
+<h3>Choose environment to remove item from set:</h3>
 <form id="form" name="form">
 
 <div>
-<label>Set ID</label>
+<label class="container">Sandbox
+  <input onfocus="closeAlerts()" type="radio" checked="checked"  value="sandbox" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Production
+  <input onfocus="closeAlerts()" type="radio" value="production" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label>Set ID </label>
 <input id="set_ID" onfocus="closeAlerts()" type="text">
-<label>Barcode :</label>
+<label>Barcode </label>
 <input id="barcode"  onfocus="closeAlerts()" type="text">
-<input id="submit" onclick="myFunction()"  type="button" value="Submit"><br />
-<input id="clear" onclick="clearForm()" onfocus="closeAlerts()" type="button" value="Clear Form">
+
+<input id="clear" onclick="clearForm()" onfocus="closeAlerts()" type="button" value="Clear Form"><br />
+<input id="submit" onclick="myFunction()"  type="button" value="Submit">
+
+
 
 </div>
 </form>
