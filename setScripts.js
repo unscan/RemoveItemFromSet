@@ -2,7 +2,9 @@ function myFunction() {
 
 var set_id = document.getElementById("set_ID").value;
 var barcode = document.getElementById("barcode").value;
-var dataString = 'set_id1=' + set_id + '&barcode1=' + barcode;
+var radio_check = document.querySelector('input[name="radio"]:checked').value;
+
+var dataString = 'set_id1=' + set_id + '&barcode1=' + barcode + '&enviro=' + radio_check;
 if (set_id == '' || barcode == '') {
   $('.alert.info').show();
 //alert("Please Fill All Fields");
